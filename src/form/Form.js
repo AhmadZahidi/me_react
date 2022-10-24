@@ -1,15 +1,21 @@
+import { useState } from "react";
+
 const Form = () => {
 
+    const [enteredName,setEnteredName]=useState('');
+    const [enteredAge,setEnteredAge]=useState('');
+    const [enteredBio,setEnteredBio]=useState('');
+
     const nameChangeHandler=(event)=>{
-        console.log(event.target.value);
+        setEnteredName(event.target.value);
     };
 
     const ageChangeHandler=(event)=>{
-        console.log(event.target.value);
+        setEnteredAge(event.target.value);
     }
 
     const bioChangeHandler=(event)=>{
-        console.log(event.target.value);
+        setEnteredBio(event.target.value);
     }
 
   return (
