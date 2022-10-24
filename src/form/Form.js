@@ -18,8 +18,19 @@ const Form = () => {
         setEnteredBio(event.target.value);
     }
 
+    const submitHandler=(event)=>{
+        event.preventDefault();
+
+        const expenseData={
+            name:enteredName,
+            age:enteredAge,
+            bio:enteredBio
+        }
+        console.log(expenseData);
+    };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div>
         <label>Name:</label>
         <input type="text" onChange={nameChangeHandler}/>
